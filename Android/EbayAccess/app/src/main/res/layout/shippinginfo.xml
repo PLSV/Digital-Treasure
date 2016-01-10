@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:visibility="visible"
+    android:id="@+id/shippinginfo">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Shipping Type"
+        android:id="@+id/ShippingType"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="54dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" Handling Time"
+        android:id="@+id/HandlingTime"
+        android:layout_below="@+id/ShippingType"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Shipping Locations"
+        android:id="@+id/ShippingLocations"
+        android:layout_below="@+id/HandlingTime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Expedited Shipping"
+        android:id="@+id/ExpeditedShipping"
+        android:layout_below="@+id/ShippingLocations"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="One Day Shipping"
+        android:id="@+id/OneDayShipping"
+        android:layout_below="@+id/ExpeditedShipping"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Returns Accepted"
+        android:id="@+id/ReturnsAccepted"
+        android:layout_below="@+id/OneDayShipping"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/returnsacceptedans"
+        android:layout_marginRight="87dp"
+        android:background="#BEBEBE"
+        android:layout_marginEnd="87dp"
+        android:layout_alignTop="@+id/ReturnsAccepted"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/onedayshippingans"
+        android:background="#000FFF"
+        android:layout_alignTop="@+id/OneDayShipping"
+        android:layout_alignLeft="@+id/returnsacceptedans"
+        android:layout_alignStart="@+id/returnsacceptedans" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/expeditedShippingans"
+        android:layout_above="@+id/onedayshippingans"
+        android:layout_alignLeft="@+id/onedayshippingans"
+        android:layout_alignStart="@+id/onedayshippingans"
+        android:background="#FFFF00" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/shippingtypeans"
+        android:layout_above="@+id/HandlingTime"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="60dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/handlingtimeans"
+        android:layout_below="@+id/shippingtypeans"
+        android:layout_alignRight="@+id/shippingtypeans"
+        android:layout_alignEnd="@+id/shippingtypeans"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/shippingTypeans"
+        android:layout_alignTop="@+id/ShippingLocations"
+        android:layout_alignLeft="@+id/handlingtimeans"
+        android:layout_alignStart="@+id/handlingtimeans" />
+</RelativeLayout>

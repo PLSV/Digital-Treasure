@@ -1,0 +1,198 @@
+<html>
+<head>
+<title>Welcome To Udbhav</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<style>
+h1
+{
+	text-align: center;
+}
+html
+{
+    height: 100%;
+}
+.festimg
+{
+	width:100%;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img
+{
+    width: 25%;
+    margin: auto;
+	height: 60%;
+}
+body
+{
+    background-image: url("Udbhav_Retro_Theme.jpg");
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="jumbotron">
+<h1><img src="HeadImage.jpg"></h1>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand scroll-top" target="_blank" href="http://www.msrit.edu"><img src="MSRIT.png" height="30" width="30"></a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="#"><img src="FB.png" onclick="facebook_connect()"></a></li>
+		<li>
+		<button type="button" class="btn btn-primary" onclick="MSRIT();">MSRITian</button>
+		<button type="button" class="btn btn-primary" onclick="nonMSRIT();">Non-MSRITian</button>
+		<button type="button" class="btn btn-primary" onclick="VolunteerSignUp();">Volunteer</button>
+		<button type="button" class="btn btn-primary" onclick="Discuss();">Chat</button>
+		</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<img class="festimg" src="Udbhav_3.jpg" height="400">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+	<li data-target="#myCarousel" data-slide-to="4"></li>
+	<li data-target="#myCarousel" data-slide-to="5"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <a href="ArtEvents.html"><img src="arts.jpg" alt="arts"></a>
+    </div>
+    <div class="item">
+      <a href="LiteratureEvents.html"><img src="literature.jpg" alt="literature"></a>
+    </div>
+    <div class="item">
+      <a href="MusicEvents.html"><img src="music.jpg" alt="music"></a>
+    </div>
+    <div class="item">
+      <a href="TheatreEvents.html"><img src="theatre.jpg" alt="theatre"></a>
+    </div>
+	   <div class="item">
+      <a href="DanceEvents.html"><img src="dance.jpg" alt="dance"></a>
+    </div>
+	<div class="item">
+      <a href="FunEvents.html"><img src="funstuff.jpg" alt="funstuff"></a>
+    </div>
+  </div>
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div>
+	See what it means to be at the hottest college fest in Bangalore<br>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/MgMucqvrdzI" frameborder="0" allowfullscreen></iframe>
+</div>
+<fieldset>
+<form id="file-form" action="UdbhavFileUpload.php" method="POST">
+<div class="row">
+	<div class="col-sm-5"><input type="file" id="file-select" name="image" /></div>
+	<div class="col-sm-7"><button class="btn btn-primary" type="submit" id="upload-button">Upload</button></div>
+</div>
+</form>
+</fieldset>
+</div>
+</div>
+<script>
+	var form = document.getElementById('file-form');
+	var fileSelect = document.getElementById('file-select');
+	var uploadButton = document.getElementById('upload-button');
+	form.onsubmit = function(event)
+	{
+		event.preventDefault();
+		uploadButton.innerHTML = 'Uploading...';
+		var files = fileSelect.files;
+		var formData = new FormData();
+		var file = files[0];
+		formData.append('image', file, file.name);
+		var xhr = new XMLHttpRequest();
+		xhr.open('POST','UdbhavFileUpload.php',true);
+		xhr.onload = function()
+		{
+			if(xhr.status === 200)
+			{
+				uploadButton.innerHTML = 'Upload';
+			}
+			else
+			{
+				alert("Response from server: "+xhr.responseText+"\nStatusCode: "+xhr.status+"\nstatus: "+xhr.readyState);
+			}
+		}
+		xhr.send(formData);
+	}
+</script>
+<script>
+		window.fbAsyncInit = function(){
+			FB.init({
+				appId      : '1628764227341784',
+				xfbml      : true,
+				version    : 'v2.3'
+			});
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		
+		function facebook_connect()
+        {
+            FB.ui(
+			{
+                method: 'feed',
+                link: 'http://cs-server.usc.edu:27952/MSRIT_Udbhav_VTU_Fest/index.html',
+                caption: 'UDBHAV Fantasia 16',
+                picture: 'http://cs-server.usc.edu:27952/MSRIT_Udbhav_VTU_Fest/Udbhav_3.jpg',
+                description: 'Tell all your friends about Ramaiah\'s super exciting fest!!!',
+                name: 'UDBHAV',
+            }, function(response) {
+                if (response) {
+                    if (!response.error_code) {
+                        alert("Posted Successfully");
+                    }
+                    else
+                    {
+                        alert("Unable to Post");
+                    }
+                }
+            });
+        }
+</script>
+<script>
+function MSRIT()
+{
+	window.location.assign("Udbhav_MSRIT_Form.html");
+}
+function nonMSRIT()
+{
+	window.location.assign("Udbhav_NON_MSRIT_Form.html");
+}
+function VolunteerSignUp()
+{
+	window.location.assign("Udbhav_Volunteer_SignUp.html");
+}
+function Discuss()
+{
+	window.location.assign("index.php");
+}
+</script>
+</body>
+</html>

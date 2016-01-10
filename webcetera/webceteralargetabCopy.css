@@ -1,0 +1,41 @@
+.portraits{
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ height: 200px;
+ width: 200px;
+}
+.mynav {
+ color: #fbad8b;
+ font-weight: 900;
+ text-align: center;
+ font-size: 15px;
+ padding-left: 0px;
+ padding-right: 25px;
+}
+#menu li a {
+ padding-left: 25px;
+ padding-right: 30px;
+}
+.full-circle {
+ background-color:#c06;
+ height:190px;
+ width:190px;
+ border-radius:155px;
+ text-align: center;
+}
+#branch{
+    list-style-type: none;
+    margin-left: 20px;
+    padding: 0;
+}
+#branch li {
+ font-size: 16px;
+ margin: 0 1px;
+ padding: 0 8px;
+ border-right-style: solid;
+ border-width: 2px;
+}
+#branch li.spt{
+border-right:none !important;
+}

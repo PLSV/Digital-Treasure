@@ -1,0 +1,3 @@
+Description:
+
+These are the prototype modules I had developed for the Construction Meeting Minutes Project except for the PdfConverter app which I had constructed through an iText tutorial from the web (I added it because it is a part of the prototype which we wanted to develop for the client, source:- 'http://www.codeproject.com/Articles/986574/Android-iText-Pdf-Example' by Val Okafor). They are not complete yet as the integration of these prototypes is yet to be done. 

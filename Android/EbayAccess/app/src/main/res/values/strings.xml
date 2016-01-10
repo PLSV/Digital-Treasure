@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EbayAccess</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="fb_app_id">1552040565056323</string>
+
+    <string-array name="price_sort">
+        <item>Best Match</item>
+        <item>Price: highest first</item>
+        <item>Price + Shipping: highest first</item>
+        <item>Price + Shipping: lowest first</item>
+    </string-array>
+
+</resources>

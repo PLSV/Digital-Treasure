@@ -1,0 +1,89 @@
+<html>
+<head>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<style>
+body
+{
+    background-image: url("Udbhav_Retro_Theme.jpg");
+}
+</style>
+</head>
+<body>
+<script>
+$(document).ready(function()
+{
+	$("#udbhav").submit(function()
+	{
+		$.ajax(
+		{
+			type: "POST",
+			url: "Volunteer_Signup.php", //Relative or absolute path to response.php file
+			datatype: "json",
+			data:$("#udbhav").serializeArray(),
+			success: function(data) 
+			{
+				JSONObj = jQuery.parseJSON(data);
+				if(JSONObj.success == 1)
+				{
+					window.alert(JSONObj.message);
+					window.location.assign("index.html");
+				}
+			},
+			error: function(ts)
+			{
+				$("#result").html("failure reason:"+ts.responseText);
+			}
+		});
+		return false;
+	});
+});
+</script>
+<div class="container">
+<div class="jumbotron">
+<form id="udbhav" method="POST">
+<fieldset>
+<div class="row">
+<div class="col-sm-2">First Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div class="col-sm-8"><input type="text" class="form-control" id="FN" name="FName" required></div>
+</div>
+<br />
+<div class="row">
+<div class="col-sm-2">Middle Name:&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div class="col-sm-8"><input type="text" class="form-control" id="MI" name="MInit"></div>
+</div>
+<br />
+<div class="row">
+<div class="col-sm-2">Last Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> 
+<div class="col-sm-8"><input type="text" class="form-control" id="LN" name="LName" required></div>
+</div>
+<br />
+<div class="row">
+<div class="col-sm-2">USN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div class="col-sm-8"><input type="text" class="form-control" id="VU" name="V_USN" required></div>
+</div>
+<br />
+<div class="row">
+<div class="col-sm-2">Semester:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div class="col-sm-8"><input type="number" class="form-control" id="S" name="Semester" min="1" max="8" required></div>
+</div>
+<br />
+<div class="row">
+<div class="col-sm-2">Department:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> 
+<div class="col-sm-8"><input type="text" class="form-control" id="D" name="Department" required></div>
+</div>
+<br />
+<div class="row">
+<div class="col-sm-2">PhoneNo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> 
+<div class="col-sm-8"><input type="text" class="form-control" id="P" name="PhoneNo" required></div>
+</div>
+<br />
+<input type="submit" id="submit" class="btn btn-primary" name="submit">
+</fieldset>
+</form>
+<div id="result"></div>
+</div>
+</div>
+</body>
+</html>

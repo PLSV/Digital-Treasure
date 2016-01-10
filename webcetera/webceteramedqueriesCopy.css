@@ -1,0 +1,112 @@
+.row img{
+ display: block;
+ margin:0 auto 0 auto; 
+}
+.portraits {
+ display: block;
+ height: 200px;
+ width: 200px;
+}
+.full-circle {
+ background-color:#c06;
+ height:190px;
+ width:190px;
+ border-radius:155px;
+ text-align:center;
+ display: block;
+ margin: 0 auto;
+}
+#phno{
+ text-align:center;
+ font-size: 90%;
+}
+.top-right button{
+ width: 100%;
+ margin-top: 7px;
+}
+#socacc{
+ float:none;
+ margin:0 auto;
+ display:inline-block;
+}
+#menu li{
+ margin-bottom: 1px;
+}
+#menu ul li,#menu li a,.top-right {
+ width: 100%; 
+}
+a.navbar-brand, #menu{
+ display:none;
+}
+.social {
+ display: block;
+ text-align:center;
+ margin:0 auto;
+ float:none;
+}
+.social ul {
+ list-style: none;
+ margin: 20px auto;
+ padding: 0;
+}
+.social ul li {
+ display: inline-block;
+ width:30px;
+ height:30px; 
+ float:none;
+}
+.show-menu {
+ width: 100%;
+ display:block;
+}
+.mynav {
+ color: #ef7e4d;
+ font-weight: 900;
+ text-align:center;
+}
+#phno{
+ text-align:center;
+ font-size:20px;
+}
+.ins-drp{
+ padding-right:0px;
+}
+.right-ok{
+ padding-left:0px;
+}
+#InsType{
+ width: 145px;
+}
+.insu{
+ background-color: #ffffff;
+ padding-bottom: 7px;
+}
+#insumid{
+ margin: 7px 0px 7px 0px  
+}
+#insutop{
+ margin: -10px 0px 7px 0px;
+}
+#insubot{
+ margin: 7px 0px -10px 0px;
+}
+.bisect{
+ display: block;
+ border-width:3px;
+ border-color:black;
+}
+#branch{
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+}
+#branch li {
+ display: block;
+ text-align: center;
+ border-bottom-style: solid;
+ border-right-style: none;
+ border-width: 2px;
+}
+#branch li.spt{
+border-bottom:none !important;
+}

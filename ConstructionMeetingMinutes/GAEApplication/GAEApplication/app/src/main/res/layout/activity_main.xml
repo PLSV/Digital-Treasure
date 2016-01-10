@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MyActivity">
+
+    <TextView
+        android:text="Construction Meeting Minutes for DPW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Meetings"
+        android:id="@+id/btnGetQuotes"
+        android:layout_below="@+id/textView"
+        android:onClick="getQuotes"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Id"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/btnGetQuotes"
+        android:inputType="number" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/What"
+        android:layout_below="@+id/Id"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/Id" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Who"
+        android:layout_below="@+id/What"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a Meeting"
+        android:id="@+id/Insert"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Who"
+        android:onClick="insertQuote" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/IdToDelete"
+        android:layout_below="@+id/Insert"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp"
+        android:layout_alignEnd="@+id/Who" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove a Meeting"
+        android:id="@+id/btnDelQuotes"
+        android:onClick="deleteQuote"
+        android:layout_below="@+id/IdToDelete"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

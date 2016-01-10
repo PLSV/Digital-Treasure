@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:id="@+id/sellerinfo">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="User Name"
+        android:id="@+id/userName"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/FeedbackScore"
+        android:layout_alignStart="@+id/FeedbackScore" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Feedback Score"
+        android:id="@+id/FeedbackScore"
+        android:layout_below="@+id/userName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Positive Feedback"
+        android:id="@+id/PositiveFeedback"
+        android:layout_below="@+id/FeedbackScore"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="FeedBack Rating"
+        android:id="@+id/FeedBackRating"
+        android:layout_below="@+id/PositiveFeedback"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Top Rated"
+        android:id="@+id/topRated"
+        android:layout_below="@+id/FeedBackRating"
+        android:layout_alignLeft="@+id/FeedBackRating"
+        android:layout_alignStart="@+id/FeedBackRating"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Store"
+        android:id="@+id/Store"
+        android:layout_below="@+id/topRated"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/topratedimage"
+        android:background="#BEBEBE"
+        android:layout_below="@+id/feedbackratingans"
+        android:layout_alignRight="@+id/feedbackratingans"
+        android:layout_alignEnd="@+id/feedbackratingans" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/usernameans"
+        android:layout_above="@+id/FeedbackScore"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="60dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/feebackscoreans"
+        android:layout_below="@+id/usernameans"
+        android:layout_alignRight="@+id/usernameans"
+        android:layout_alignEnd="@+id/usernameans"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/positivefeedbackans"
+        android:layout_below="@+id/feebackscoreans"
+        android:layout_alignRight="@+id/feebackscoreans"
+        android:layout_alignEnd="@+id/feebackscoreans"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/feedbackratingans"
+        android:layout_alignTop="@+id/FeedBackRating"
+        android:layout_alignLeft="@+id/positivefeedbackans"
+        android:layout_alignStart="@+id/positivefeedbackans" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/storeans"
+        android:layout_alignTop="@+id/Store"
+        android:layout_alignLeft="@+id/feedbackratingans"
+        android:layout_alignStart="@+id/feedbackratingans" />
+</RelativeLayout>

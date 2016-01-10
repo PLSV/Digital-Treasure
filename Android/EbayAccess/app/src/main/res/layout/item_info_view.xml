@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:id="@+id/Display">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:id="@+id/ProdImageView"
+        android:src="@drawable/ebay"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Product Description along with rest of the details"
+        android:id="@+id/ItemDetails"
+        android:layout_below="@+id/ProdImageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textIsSelectable="false"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Price of the item along with the location where it is sold and whether or not it has free shipping"
+        android:id="@+id/PriceDisplay"
+        android:layout_below="@+id/ItemDetails"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy Now"
+        android:id="@+id/BuyNow"
+        android:layout_below="@+id/PriceDisplay"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/facebook"
+        android:layout_alignTop="@+id/BuyNow"
+        android:layout_toRightOf="@+id/ProdImageView"
+        android:src="@drawable/fb"
+        android:onClick="onfbClick" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/topRated"
+        android:layout_alignTop="@+id/BuyNow"
+        android:layout_toLeftOf="@+id/ProdImageView"
+        android:layout_toStartOf="@+id/ProdImageView"/>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/Info_Tabs"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ScrollViewSeller">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:id="@+id/sellerinfo"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="User Name"
+                    android:id="@+id/userName"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/FeedbackScore"
+                    android:layout_alignStart="@+id/FeedbackScore" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Feedback Score"
+                    android:id="@+id/FeedbackScore"
+                    android:layout_below="@+id/userName"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Positive Feedback"
+                    android:id="@+id/PositiveFeedback"
+                    android:layout_below="@+id/FeedbackScore"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="FeedBack Rating"
+                    android:id="@+id/FeedBackRating"
+                    android:layout_below="@+id/PositiveFeedback"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Top Rated"
+                    android:id="@+id/TopRated"
+                    android:layout_below="@+id/FeedBackRating"
+                    android:layout_alignLeft="@+id/FeedBackRating"
+                    android:layout_alignStart="@+id/FeedBackRating"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Store"
+                    android:id="@+id/Store"
+                    android:layout_below="@+id/TopRated"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp" />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/topratedimage"
+                    android:background="#FFFFFF"
+                    android:layout_below="@+id/feedbackratingans"
+                    android:layout_alignRight="@+id/feedbackratingans"
+                    android:layout_alignEnd="@+id/feedbackratingans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:id="@+id/usernameans"
+                    android:layout_above="@+id/FeedbackScore"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="60dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:id="@+id/feebackscoreans"
+                    android:layout_below="@+id/usernameans"
+                    android:layout_alignRight="@+id/usernameans"
+                    android:layout_alignEnd="@+id/usernameans"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:id="@+id/positivefeedbackans"
+                    android:layout_below="@+id/feebackscoreans"
+                    android:layout_alignRight="@+id/feebackscoreans"
+                    android:layout_alignEnd="@+id/feebackscoreans"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:id="@+id/feedbackratingans"
+                    android:layout_alignTop="@+id/FeedBackRating"
+                    android:layout_alignLeft="@+id/positivefeedbackans"
+                    android:layout_alignStart="@+id/positivefeedbackans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:id="@+id/storeans"
+                    android:layout_alignTop="@+id/Store"
+                    android:layout_alignLeft="@+id/feedbackratingans"
+                    android:layout_alignStart="@+id/feedbackratingans" />
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:id="@+id/basicinfo"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Category"
+                android:id="@+id/category"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/condition"
+                android:layout_alignStart="@+id/condition" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Condition"
+                android:id="@+id/condition"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/category"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Buying Format"
+                android:id="@+id/BuyingFormat"
+                android:layout_below="@+id/condition"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/categoryAns"
+                android:layout_above="@+id/condition"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="67dp"
+                android:layout_marginEnd="67dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/conditionAns"
+                android:layout_alignTop="@+id/condition"
+                android:layout_alignLeft="@+id/categoryAns"
+                android:layout_alignStart="@+id/categoryAns" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/BuyingFormatAns"
+                android:layout_alignTop="@+id/BuyingFormat"
+                android:layout_alignLeft="@+id/conditionAns"
+                android:layout_alignStart="@+id/conditionAns" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ScrollViewShipping">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:visibility="visible"
+                android:id="@+id/shippinginfo">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Shipping Type"
+                    android:id="@+id/ShippingType"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/HandlingTime"
+                    android:layout_alignStart="@+id/HandlingTime" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=" Handling Time"
+                    android:id="@+id/HandlingTime"
+                    android:layout_below="@+id/ShippingType"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Shipping Locations"
+                    android:id="@+id/ShippingLocations"
+                    android:layout_below="@+id/HandlingTime"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Expedited Shipping"
+                    android:id="@+id/ExpeditedShipping"
+                    android:layout_below="@+id/ShippingLocations"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="One Day Shipping"
+                    android:id="@+id/OneDayShipping"
+                    android:layout_below="@+id/ExpeditedShipping"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Returns Accepted"
+                    android:id="@+id/ReturnsAccepted"
+                    android:layout_below="@+id/OneDayShipping"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/returnsacceptedans"
+                    android:layout_marginRight="87dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginEnd="87dp"
+                    android:layout_alignTop="@+id/ReturnsAccepted"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/onedayshippingans"
+                    android:background="#FFFFFF"
+                    android:layout_alignTop="@+id/OneDayShipping"
+                    android:layout_alignLeft="@+id/returnsacceptedans"
+                    android:layout_alignStart="@+id/returnsacceptedans" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/expeditedShippingans"
+                    android:layout_above="@+id/onedayshippingans"
+                    android:layout_alignLeft="@+id/onedayshippingans"
+                    android:layout_alignStart="@+id/onedayshippingans"
+                    android:background="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:id="@+id/shippingtypeans"
+                    android:layout_above="@+id/HandlingTime"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="60dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:id="@+id/handlingtimeans"
+                    android:layout_below="@+id/shippingtypeans"
+                    android:layout_alignRight="@+id/shippingtypeans"
+                    android:layout_alignEnd="@+id/shippingtypeans"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Medium Text"
+                    android:id="@+id/shippingLocationans"
+                    android:layout_alignTop="@+id/ShippingLocations"
+                    android:layout_alignLeft="@+id/handlingtimeans"
+                    android:layout_alignStart="@+id/handlingtimeans" />
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Basic Info"
+        android:id="@+id/basic"
+        android:layout_below="@+id/BuyNow"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seller Info"
+        android:id="@+id/seller"
+        android:layout_alignTop="@+id/shipping"
+        android:layout_alignRight="@+id/BuyNow"
+        android:layout_alignEnd="@+id/BuyNow" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shipping Info"
+        android:id="@+id/shipping"
+        android:layout_below="@+id/facebook"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
