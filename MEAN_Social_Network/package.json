@@ -1,0 +1,12 @@
+{
+  "name": "TimeSuck",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "mongojs": "^2.3.0",
+    "mongoose": "^4.4.1",
+    "multer": "^1.1.0"
+  }
+}
