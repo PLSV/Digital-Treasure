@@ -1,0 +1,27 @@
+<ion-view  hide-nav-bar="true" id="page17" ng-controller="likeCtrl" style="background:url('img/bg@2x.png');">
+    <ion-content class="padding"><br>
+        <a ng-click="back();" class="backbutton" style="text-align:left;"><img src="img/back.png" height=12px> BACK</a>
+        <h3 class="center">COMMENTS</h3>
+        <div ng-model="commentBox" ng-repeat="comment in commentsreceived">
+            <div class="item  customWhite padding-bottom">
+                <span class="customWhite"> <b class="customWhite"> {{comment.author.name.first+" "+comment.author.name.last}}:</b>&nbsp; {{ comment.text }}</span>
+                <a class="response" ng-click="comment.wannareply = !comment.wannareply">reply?</a>
+              <div class="spacer" style="width: 281.111px; height: 7px;"></div>
+              <div class=" item item-avatar customWhite replyPad" ng-repeat="reply in comment.comments">
+                    <span class="customWhite"> &nbsp;&nbsp;&nbsp;<b class="customWhite"><a ui-sref="doctor({ doctor: comment.author._id })">{{reply.author.name.first+" "+reply.author.name.last}}:</a></b> {{ reply.text }}</span>
+                </div>
+                <form ng-show="comment.wannareply" class="padding">
+                    <div class="row replyBox ">
+                        <textarea class="item item-input center padding" placeholder="Respond here" ng-model="comment.nextResponse"></textarea>
+                        <button class=" button-medium changeTab" ng-click="respond(video_id, comment._id, comment.nextResponse);">Respond</button>
+                    </div>
+                </form>
+            </div>
+            <hr>
+        </div>
+    </ion-content>
+    <ion-footer-bar keyboard-attach>
+        <textarea class="item item-input center padding " placeholder="Enter your comments" ng-model="opinion"></textarea>
+        <button class="addBtn commaddipad" ng-click="addComment();">Add</button>
+    </ion-footer-bar>
+</ion-view>

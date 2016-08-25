@@ -1,0 +1,65 @@
+<ion-view hide-nav-bar="true" id="page12" class=" " style="background:url('img/bg@2x.png')">
+  <ion-content padding="true" overflow-scroll="true"  ng-controller="Registration" ng-init="getOrganizations();" style="height=100%;"> <br>
+    <a ui-sref="page14" class="backbutton" style="text-align:left;" ><img src="img/back.png" height=12px> BACK</a>
+    <div>
+      <p class="center"><br>
+        <b class="customWhite">Sign Up</b>
+      </p>
+    </div>
+    <div>
+      <progress value="70" max="100">
+        <span id="downloadProgress">70</span>%
+      </progress>
+    </div>
+    <div class="spacer" style="width: 300px; height: 7px;"></div>
+    <div>
+      <p>
+        <b class="customWhite">Medical School Information</b>
+      </p>
+    </div> <br>
+    <form id="page5-form8"  name="myForm" class="list " >
+      <div class="regBg ">
+      <label class="item item-select reg1" id="page5-input6">
+      <span class="input-label center spacer regFont"> SCHOOL</span>
+        <select class="selSpacer" ng-model="registerform.medicalSchool">
+          <option class="regFont" ng-repeat="school in medicalSchools" ng-value="school._id">{{school.name}}</option>
+        </select>
+      </label>
+        </div>
+      <div class="spacer schoolgalaxy schoolnexusX schooliphone5 schoolIphone6 schooliPhone6S" style="width: 300px; height: 30px;"></div>
+      <div class="regBg ">
+      <label class="item item-input" id="page5-input7">
+        <input type="text" class="space center" placeholder="SCHOOL EMAIL" ng-model="registerform.schoolemail"  ng-pattern="/^[A-Za-z0-9+_.-]+@[A-Za-z0-9+_.-]+\.(edu)$/" required/>
+      </label>
+        </div>
+      <div class="spacer schoolgalaxy schoolnexusX schooliphone5 schoolIphone6 schooliPhone6S" style="width: 300px; height: 30px;"></div>
+      <div class="regBg ">
+      <label class="item item-input" id="page5-select">
+        <input type="text" class="space center" placeholder="GRADUATION (MM/YYYY)" ng-model="registerform.gradday"  ng-pattern="/(0[1-9]|1[012])[- \/.](19|20)\d\d/" required/>
+      </label>
+        </div>
+      <div class="schoolgalaxy schoolnexusX schooliphone5 schoolIphone6 schooliPhone6S" style="width: 300px; height: 30px;"></div><br>
+      <div class="regBg ">
+      <label class="item item-input" id="page5-selec">
+        <input type="text" class="space center"  placeholder="CO-ORDINATOR'S NAME" ng-model="registerform.directorname"/>
+      </label>
+        </div>
+      <div class="schoolgalaxy schoolnexusX schooliphone5 schoolIphone6 schooliPhone6S" style="width: 300px; height: 30px;"></div><br>
+      <div class="regBg ">
+      <label class="item item-input" id="page5-select3">
+        <input type="text" class="space center"  placeholder=" CO-ORDINATOR'S EMAIL" ng-model="registerform.directoremail" />
+      </label>
+        </div>
+      <div class="spacer" style="width: 300px; height: 30;"></div>
+      <div style="margin-right:-20px;"> <br>
+        <div class="entry"></div>
+        <div class="corridor">
+
+        <button id="page5-button9"  class="button slick ipadfonts" ui-sref="page7" ng-disabled="myForm.$invalid" ng-click="setFormData();">Next</button>
+      </div>
+        <div class="exit"></div>
+      </div>
+    </form>
+
+  </ion-content>
+</ion-view>

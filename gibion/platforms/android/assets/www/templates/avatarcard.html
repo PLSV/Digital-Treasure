@@ -1,0 +1,51 @@
+<div>
+  <div class="profile-avatar-cont">
+    <!-- if current user, clicking on container opens file uploader -->
+    <div class="drop-box profile-avatar on-top pointer dotted-border quick-fade"
+         ng-show="isActive || !user.avatar" ng-model="file"
+         ngf-drop="action(file)" ngf-select="action(file)"
+         ngf-drag-over-class="'dragover'" accept="image/*"
+         ngf-pattern="'image/*'" ngf-min-height="200"
+         ngf-resize="{width: 200, height: 200, ratio: '1:1', centerCrop: true}">
+
+      <div class="overlay-text " style="margin-top:60px;" ng-if = "isActive">Update Picture</div>
+      <div class="overlay-hint" ng-if="isActive"></div>
+    </div>
+
+    <div class="space-filler"></div>
+
+    <div class="profile-avatar center" style="padding-left:0px !important;">
+      <div ng-if="user.avatar" class="item-avatar " style="padding-left:0px !important;">
+            <img class="userdetail " style="left : 0px !important;" src="{{user.avatar}}"/>
+        </div>
+      </div>
+      <div ng-hide="user.avatar">
+        <!-- current user profile -->
+        <div ng-if="isEditable">
+          <div class="avatar-details avatar-icon">
+            <img src="images/utiliti_nav_upload.png" class="img-responsive center-block center" alt="missing">
+          </div>
+          <div class="avatar-details avatar-hint center section-subheading">
+            <div>YOU DON'T HAVE A PICTURE YET</div>
+            <div>CLICK TO UPLOAD</div>
+          </div>
+          <div class="center avatar-details avatar-upload">
+          </div>
+        </div>
+        <!-- doctor detail view -->
+        <div ng-hide="isEditable" class="center avatar-details avatar-upload section-subheading">
+          <div class="avatar-details avatar-icon">
+            <!-- Need larger edit_icon for user here -->
+            <!-- <img src="images/edit_icon.png" class="img-responsive center-block" alt="missing"> -->
+          </div>
+          <div>{{user.salutation | uppercase }} {{user.name.first | uppercase }} {{user.name.last | uppercase }}</div>
+          <div>DOESN'T HAVE A PICTURE YET</div>
+        </div>
+      </div>
+    </div>
+    <div ng-show="isUploading" class="avatar-loading">
+      <span>Loading...</span>
+    </div>
+  </div>
+  <br>
+</div>

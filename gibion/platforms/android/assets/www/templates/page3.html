@@ -1,0 +1,65 @@
+<ion-view hide-nav-bar="true" id="page10" class=" "  style="background:url('img/bg@2x.png')">
+    <ion-content padding="true" scroll="false" ng-controller="Registration" overflow-scroll="true">
+<br>
+      <a ui-sref="page" class="backbutton" style="text-align:left;" ><img src="img/back.png" height=12px> BACK</a>
+      <div class="spacer signupiphone5 signupgalaxy signupnexusX Signupiphone6 Signupiphone6Plus" style="width: 283px; height: 30px;"></div>
+
+      <div class="">
+        <img class="page9logo" src="img/giblib_logo@2x.png" width="100" height="" style="display: block; margin-left: auto; margin-right: auto;">
+      </div>
+      <div class="spacer signupiphone5 signupgalaxy signupnexusX Signupiphone6 Signupiphone6Plus" style="width: 283px; height: 30px;"></div>
+
+      <h4 id="page3-heading1"  class="center ">Sign Up</h4><br><br>
+
+        <div class="spacer" style="width: 283px; height: 28px;"></div>
+        <form id="page3-form5"   class="list " name="myForm">
+          <div class="regBg">
+          <label class="item item-select reg1 " id="page3-select1">
+                <span class="input-label center spacer regFont">I AM A </span>
+                <select class="selSpacer " ng-model="registerform.profession" ng-change="professionSelected()" required >
+                  <option class="regFont" ng-repeat="(profession, type) in professions">{{profession}}</option>
+                </select>
+            </label>
+          </div>
+
+          <div class="spacer" style="width: 283px; height: 28px;"></div>
+
+          <div ng-show="showSpecialties" class="regBg">
+            <label class="item item-select reg1 " id="page3-select2" >
+                <span class="input-label center spacer regFont ">SPECIALTY</span>
+                <select class="selSpacer" ng-model="registerform.specialty" ng-change="specSel()">
+                  <option class="regFont reg2" ng-repeat="specialty in specialties" ng-value="specialty._id">{{specialty.name}}</option>
+                </select>
+            </label>
+          </div>
+
+          <div ng-show="showSalutation" class="regBg" >
+            <label class="item item-select reg1">
+              <span class="input-label center spacer regFont2">&nbsp;&nbsp;SALUTATION</span>
+              <select class=" selSpacer" ng-model="registerform.salutation" ng-change="selSal()" >
+                <option class="regFont reg2">Dr.</option>
+                <option class="regFont reg2">Mr.</option>
+                <option class="regFont reg2">Ms.</option>
+                <option class="regFont reg2">Mrs.</option>
+              </select>
+            </label>
+          </div>
+            <div class="spacer signupiphone5 signupgalaxy signupnexusX Signupiphone6 Signupiphone6Plus" style="width: 282.986px; height: 74.9896px;"></div>
+
+            <div style="margin-right:-20px;" ng-show="studPage">
+              <div class="entry"></div>
+              <div class="corridor">
+                <button id="page3-button7" style="left:0px;" class="button slick ipadfonts" ng-click="setFormData();" ng-disabled="registerform.salutation === '' || registerform.salutation === undefined" ui-sref="page13">Next</button>
+              </div>
+              <div class="exit"></div>
+            </div>
+          <div style="margin-right:-20px;" ng-show="docPage">
+            <div class="entry"></div>
+            <div class="corridor">
+            <button id="page3-button" style="left:0px;" class="button slick ipadfonts" ng-click="setFormData();" ng-disabled="registerform.specialty === '' || registerform.specialty === undefined" ui-sref="page4">Next</button>
+            </div>
+            <div class="exit"></div>
+          </div>
+        </form>
+    </ion-content>
+</ion-view>

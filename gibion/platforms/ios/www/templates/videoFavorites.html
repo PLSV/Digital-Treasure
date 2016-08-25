@@ -1,0 +1,42 @@
+<ion-nav-view>
+  <ion-content scroll="true" class="has-header has-footer" >
+    <h4 class="customBlack center ipadMain">My Favorite Videos </b></h4>
+
+    <div class="list card cardMain itemTop subCard" ng-repeat="i in favoriteVideos.favorites | limitTo :limit">
+      <div class="container">
+        <div id="videocontainer">
+          <div play-card class="ng-isolate-scope">
+            <div class="play-card" style="background: url('{{i.smthumbnail ? i.smthumbnail : i.thumbnail  }}') no-repeat center center / cover, url('/img/ionic.png') no-repeat center center / cover" ng-click="startfavVideos(i);">
+              <div class="specialty {{i.specialty.name}}">
+                <a class="ng-binding" href="" tabindex="0">{{ i.specialty.name }}</a>
+              </div>
+              <a class="slideUp" check-sign-in href="" tabindex="0">
+                <div class="title font-dinn">
+                  <span class="surgery-title-spans customWhite">{{ i.title }}</span>
+                </div>
+                <div class="idle-overlay"></div>
+                <div class="play-overlay" style="background: url('img/play_logo.png') no-repeat center;"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="readmore">
+      <button class="black center"  ng-show="favoriteVideos.favorites.length > limit" ng-click="limit = limit + 5">+ MORE</button>
+    </div>
+
+    <h4 class="customBlack center"> Surgeons I Follow </h4>
+    <div class="doctor" ng-repeat="i in foll | limitTo :limit">
+      <div class="item item-avatar row">
+        <img class="favImg" ng-src="{{ i.following.avatar }}"  ui-sref="doctor({ doctor: i.following._id })">
+        <a ui-sref="doctor({ doctor: i.following._id })"><p class="favTitle">{{i.following.fullname}}</p></a>
+      </div>
+    </div><br>
+    <div class="readmore">
+      <button class="black center"  ng-show="foll.length > limit" ng-click="limit = limit + 5">+ MORE</button>
+    </div>
+    <br> <br>
+  </ion-content>
+</ion-nav-view>

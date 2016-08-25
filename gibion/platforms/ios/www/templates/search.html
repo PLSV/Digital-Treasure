@@ -1,0 +1,48 @@
+<ion-nav-view>
+  <ion-content  class="has-header has-footer" >
+    <div class=" search-desc" ng-if="searchVideos.length>0 && doctorsRoster.length>0">
+      <div class="spacer" style="width: 281.111px; height: 10px;"></div>
+      <b class="center customBlack"> YOUR SEARCH CONTAINS ({{searchVideos.length + doctorsRoster.length}}) RESULTS</b>
+    </div><br>
+
+    <div class=" search-desc" ng-if="searchVideos.length>0">
+      <b class="center customBlack"> VIDEO RESULTS ({{searchVideos.length}}) </b>
+    </div>
+
+    <div class=" search-desc" ng-if="searchVideos.length==0">
+      <b class="center customBlack">NO FOUND VIDEOS </b>
+    </div>
+
+    <div class="spacer" style="width: 281.111px; height: 10px;"></div>
+    <div class="list card itemTop subCard" ng-repeat="i in searchVideos | limitTo :limit">
+      <video-detail video="i"></video-detail>
+    </div>
+    <div class="readmore">
+      <button class="black center"  ng-show="searchVideos.length > limit" ng-click="limit = limit + 6">+ MORE</button>
+    </div>
+    <br>
+
+  <div class="search-count">
+    <b class="center customBlack" ng-if="doctorsRoster.length>0">SURGEON RESULTS ({{doctorsRoster.length}})</b>
+
+    <div ng-hide="isLoading">
+      <b class="center customBlack" ng-if="doctorsRoster.length==0">NO FOUND SURGEONS</b>
+    </div>
+  </div>
+
+  <div class="doctor " ng-repeat="doctor in doctorsRoster | limitTo :doctorlimit track by $index">
+    <div class="item item-avatar row">
+      <img class="favImg" ui-sref="doctor({ doctor: doctor._id })" ng-src="{{doctor.avatar || 'img/avatar_default.png' }}" style="width:100px;height:auto;">
+      <b class="dr-name doctor-link">
+        <a class="customBlack " ui-sref="doctor({ doctor: doctor._id })"><p class="favTitle"> {{doctor.salutation + ' ' + doctor.name.first + ' ' + doctor.name.last | limitTo: 25 }}</p><span ng-if="doctor.fullname.length > 20">...</span></a>
+      </b>
+      </div>
+    <br>
+  </div>
+
+  <div class="readmore">
+    <button class="black center" ng-show="doctorsRoster.length > doctorlimit" ng-click="doctorlimit = doctorlimit + 6">+ MORE</button>
+  </div>
+<br><br>
+  </ion-content>
+</ion-nav-view>

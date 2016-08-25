@@ -1,0 +1,33 @@
+<ion-view id="page17" class=" " style="background:url('img/bg@2x.png')">
+  <ion-content class="has-header has-footer">
+    <br>
+      <div avatar-card user="user.profile" is-editable="true" is-active="user.isHoverAvatar"
+           ng-mouseover="user.hoverIn('avatar')" ng-mouseleave="user.hoverOut('avatar')"
+           file="file" action="user.uploadAvatar(file)" is-uploading="user.isUploading">
+      </div>
+
+      <div user-detail user="user.profile" organizations="user.organizations"
+           specialties="user.specialties" specialty="user.specialty"
+           is-editable="true" is-editing="user.isEditing" no-save="user.exitForm()"
+           edit="user.editForm()" save="user.saveForm(user.profile)">
+      </div>
+
+    <h5><b class="customWhite center">Account Settings</b></h5>
+
+    <div class="section-subheading center">
+      <a class="center" ui-sref="changePassword" style="text-decoration:underline;">Change Password</a>
+      <br><br>
+
+      <div class="entry"></div>
+      <div class="corridor">
+        <button class="button slick" ng-click="logout();">
+          <p class="allbuttons customWhite">LOGOUT</p>
+        </button>
+      </div>
+      <div class="exit"></div>
+      <div class="spacer" style="width: 283px; height: 70px;"></div>
+
+    </div>
+    <br>
+  </ion-content>
+</ion-view>

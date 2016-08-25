@@ -1,0 +1,52 @@
+<ion-view  style="background:url('img/bg@2x.png')">
+
+<ion-content has-header="true">
+  <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="reload()">
+  </ion-refresher>
+  <div class="spacer" style="width: 281.111px; height: 15px;"></div>
+  <div class="row padding"><p class=" thelikers customWhite"></p>&nbsp;
+    <br>
+    <button  class="btn btn-default follbtn"  ng-if="doctor.followed"  ng-click="doctor.unfollowDoctor(doctor.obtID);"> Followed
+    </button>
+    <button  class="btn follow follbtn"  ng-if="!doctor.followed"  ng-click="doctor.followDoctor(doctor.obtID);"> Follow
+    </button>
+  </div>
+
+  <div avatar-card user="doctor.profile"></div>
+  <div user-detail user="doctor.profile"></div>
+
+  <div class="row">
+    <div class="section-subheading  center1">
+      {{doctor.profile.salutation  }} {{doctor.profile.name.first | uppercase }} {{doctor.profile.name.last | uppercase }}'S UPLOADS <span class="section-subheading"> ({{doctor.profile.uploads.length}}) </span>
+      <br>
+      </div>
+    </div>
+
+      <div class="list card itemTop subCard drCard " ng-repeat="i in doctor.uploadIDs">
+          <div id="videocontainer">
+            <div play-card class="ng-isolate-scope">
+              <div class="play-card" style="background: url('{{i.thumbnail}}') no-repeat center center / cover, url('/img/ionic.png') no-repeat center center / cover" ng-click="doctor.startplaying(i);">
+                <div class="specialty {{i.specialty.name}}">
+                  <a class="ng-binding" href="" tabindex="0">{{i.specialty.name}}</a>
+                </div>
+                <a class="slideUp" check-sign-in href="" tabindex="0">
+                  <div class="title font-dinn">
+                    <span class="surgery-title-spans nextsp customWhite">{{ i.title }}</span>
+                  </div>
+                  <div class="idle-overlay"></div>
+                  <div class="play-overlay" style="background: url('img/play_logo.png') no-repeat center;"></div>
+                </a>
+              </div>
+            </div>
+          </div> <br>
+      </div>
+
+  <br>
+
+</ion-content>
+
+  <giblib-footer></giblib-footer>
+
+</ion-view>

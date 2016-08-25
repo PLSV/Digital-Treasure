@@ -1,0 +1,33 @@
+<ion-view hide-nav-bar="true" id="page13" class=" " style="background:url('img/bg@2x.png')">
+    <ion-content padding="true"  overflow-scroll="true" ng-controller="Registration">
+      <div>
+        <br>
+            <progress value="75" max="100">
+                <span id="downloadProgress">25</span>%
+            </progress>
+        <br>
+        </div>
+        <h4 id="page6-heading2" class="center">Verify your identity</h4><br>
+        <form id="page6-form9" name="myForm" class=" regBg">
+            <label class="item item-input " id="page6-input8">
+                <input class=" space center" type="number" placeholder="NPI NUMBER" ng-model="registerform.NPI"  required/>
+            </label>
+        <div>
+          <br>
+            <p class="customWhite center">
+                Did you forget your NPI Number?
+                <br>Click
+                <a class="underline" href="https://npiregistry.cms.hhs.gov" onClick="javascript:return openExternal(this)">here</a> for more information!
+            </p>
+        </div>
+        <div class="spacer npicheck" style="width: 282.986px; height: 197.986px;"></div>
+        <div style="margin-right:-20px;" ng-init="setFormData();">
+            <div class="entry"></div>
+            <div class="corridor">
+            <button id="page6-button10" style="left:0px;" class="button slick ipadfonts" ng-click="register();" ng-disabled="myForm.$invalid">Next</button>
+            </div>
+            <div class="exit"></div>
+        </div>
+        </form>
+    </ion-content>
+</ion-view>

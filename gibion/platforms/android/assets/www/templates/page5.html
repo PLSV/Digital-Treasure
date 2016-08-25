@@ -1,0 +1,64 @@
+<ion-view id="page12" hide-nav-bar="true" class=" " style="background:url('img/bg@2x.png')">
+    <ion-content padding="true" overflow-scroll="true"  ng-controller="Registration"><br>
+      <a ui-sref="page4" class="backbutton" style="text-align:left;" ><img src="img/back.png" height=12px> BACK</a>
+      <div>
+        <p class="center BIgalaxy BInexusX BIiphone5 BIIphone6 BIiPhone6S"><br>
+          <b class="customWhite">Sign Up</b>
+        </p>
+      </div>
+      <div>
+        <progress value="50" max="100">
+          <span id="downloadProgress">25</span>%
+        </progress>
+      </div>
+      <div class="spacer" style="width: 300px; height: 7px;"></div>
+      <div>
+        <p class="BIgalaxy BInexusX BIiphone5 BIIphone6 BIiPhone6S"><br>
+          <b class="customWhite">Basic Information</b>
+        </p><br>
+      </div>
+      <form id="page5-form8"   name="myForm" class="list " >
+        <div class="regBg">
+        <label class="item item-input" id="page5-input6">
+          <input class="space center" type="text"ng-model="registerform.firstname" placeholder=" FIRST NAME" required/>
+        </label>
+          </div>
+        <div class="spacer" style="width: 300px; height: 25px;"></div>
+        <div class="regBg">
+        <label class="item item-input" id="page5-input7">
+          <input class="space center" type="text" placeholder=" LAST NAME" ng-model="registerform.lastname" required/>
+        </label>
+          </div>
+        <div class="spacer" style="width: 300px; height: 25px;"></div>
+        <div class="regBg">
+        <label class="item item-input" id="page5-select3">
+          <input type="text" class="space center" placeholder=" BIRTHDAY (MM/DD/YYYY)" ng-model="registerform.birthday" ng-pattern="/(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/"  required/>
+        </label>
+        </div>
+        <div class="spacer" style="width: 300px; height: 25px;"></div>
+        <div class="regBg">
+          <label class="item item-select " id="page5-select4">
+            <span class="input-label center space" style="margin-left:40px;">Location</span>
+            <select ng-model="loc" class="space selspacer" ng-options="count.id as count.name for count in countList" ng-change="onchange(countList[loc])">
+            </select>
+          </label>
+          </div> <br>
+      <div class="spacer" style="width: 300px; height: 13.9861px;"></div>
+        <div style="margin-right:-20px;" ng-show="us">
+        <div class="entry"></div>
+        <div class="corridor">
+          <button id="page5-button" style="left:0px;"  class="button slick ipadfonts" ui-sref="page6" ng-click="setFormData();"  ng-disabled="myForm.$invalid ">Next</button>
+        </div>
+        <div class="exit"></div>
+        </div>
+        <div style="margin-right:-20px;" ng-show="outside">
+        <div class="entry"></div>
+        <div class="corridor">
+          <button id="page5-button9" style="left:0px;"  class="button slick ipadfonts" ui-sref="page7" ng-click="setFormData();" ng-disabled="myForm.$invalid">Next</button>
+        </div>
+        <div class="exit"></div>
+        </div>
+      </form>
+
+    </ion-content>
+</ion-view>

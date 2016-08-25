@@ -1,0 +1,26 @@
+<ion-view title="Page" id="page9" hide-nav-bar="true" style="background:url('img/bg@2x.png')">
+  <ion-content padding="true" scroll="false" class="has-header padding center" ng-controller="Forgot">
+    <a ui-sref="page" id="page2-button4" style="text-align:left;"><img src="img/back.png" height=12px class=""> <span class="customWhite"> BACK </span></a>
+    <div class="spacer" style="width: 283px; height: 11px;"></div> <br>
+    <div class="">
+      <img src="img/giblib_logo@2x.png" width="120" height="" style="display: block; margin-left: auto; margin-right: auto;"><br>
+    </div><br>
+    <div class="lower">
+      <h3>Forgot Password</h3>
+    </div>
+    <div class="spacer" style="width: 283px; height: 14px;"></div>
+
+        <div class="form-group">
+          <div class="">
+            <form class="center">
+              <label for="email" class="customWhite">Email Address</label> <br>
+              <div class="spacer" style="width: 283px; height: 14px;"></div>
+              <label class="item item-input change " id="page2-input4">
+                <input type="text" class="form-control" id="email" name="email" ng-model="forgotForm.email"> <br>
+              </label> <br>
+              <input class="btn btn-black btnCol" type="submit" ng-click="sendForgotEmail()" value="Send Password Reset Email"/>
+            </form>
+          </div>
+    </div>
+  </ion-content>
+</ion-view>

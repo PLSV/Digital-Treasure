@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="stylesheet" href="fonts/opensans/css/fonts.css">
+
+    <link href="css/tabSlideBox.css" rel="stylesheet">
+    <link href="css/slidingTabs.css" rel="stylesheet">
+    <!--<link href="lib/video.js/dist/video-js.css" rel="stylesheet">-->
+    <link href="lib/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <script src="bower/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower/ngtoast/dist/ngToast.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ngstorage/ngStorage.min.js"></script>
+    <script src="lib/ng-file-upload-shim/ng-file-upload.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="js/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+
+    <script src="js/configs/constant.js"></script>
+    <script src="js/configs/http.js"></script>
+    <script src="js/configs/mixpanel.js"></script>
+
+    <script src="js/factories/authinterceptor.js"></script>
+
+    <script src="js/services/auth.js"></script>
+
+    <script src="js/controllers/registration.js"></script>
+    <script src="js/controllers/forgot.js"></script>
+
+    <script src="js/controllers/favCtrl.js"></script>
+
+    <script src="js/controllers/videoList.js"></script>
+    <script src="js/controllers/player.js"></script>
+    <script src="js/controllers/likeCtrl.js"></script>
+    <script src="js/controllers/profile.js"></script>
+    <script src="js/controllers/Youtube.js"></script>
+    <script src="js/directives/userdetail.js"></script>
+
+    <script src="js/services/model.js"></script>
+    <script src="js/services/uploader.js"></script>
+
+    <script src="js/services/user.js"></script>
+    <script src="js/tabSlideBox.js"></script>
+    <script src="js/directives/avatarcard.js"></script>
+    <script src="js/directives/videoDetail.js"></script>
+    <script src="js/directives/giblibHeader.js"></script>
+    <script src="js/directives/giblibFooter.js"></script>
+
+    <script src="lib/video.js/dist/video.min.js"></script>
+    <script src="lib/three.js/three.js"></script>
+    <script src="lib/videojs-youtube/dist/Youtube.min.js"></script>
+    <script src="lib/videojs-panorama/dist/videojs-panorama.v5.min.js"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="lib/angular-mixpanel/src/angular-mixpanel.js"></script>
+    <script src="lib/mixpanel/mixpanel-jslib-snippet.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <script>
+      videojs.options.flash.swf = "lib/video.js/dist/video-js.swf"
+    </script>
+
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="http://vjs.zencdn.net/5.10.4/video-js.css" rel="stylesheet">
+    <link href="lib/videojs-panorama/dist/videojs-panorama.min.css" rel="stylesheet">
+
+    <style type="text/css">
+      .platform-ios .manual-ios-statusbar-padding{
+        padding-top:20px;
+      }
+      .manual-remove-top-padding{
+        padding-top:0px;
+      }
+      .manual-remove-top-padding .scroll{
+        padding-top:0px !important;
+      }
+      ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+        margin-left:-10px;
+        margin-right:-10px;
+      }
+      ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+        border-radius:0px;
+        border-left:0px;
+        border-right: 0px;
+      }
+    </style>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/slidingTabsDirective.js"></script>
+    <script src="js/tabSlideBox.js"></script>
+
+
+    <!-- Only required for Tab projects w/ pages in multiple tabs
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+    -->
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

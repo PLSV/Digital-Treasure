@@ -1,0 +1,114 @@
+<div class="btnFix">
+<div class="pad-sides-md rm-bootstrap-form-animation leftAlign" >
+<div style="left:50px;">
+    <div ng-if="isEditable && !isEditing"
+         ng-class="{ 'btn-rnd-cont': isEditable }">
+      <div class="btn-rnd btn-rnd-right quick-fade" ng-click="edit()">
+        <img class="round-img quick-fade RIiP6 RIGS5 RIiP6S RINX6P RIiP5 RINX5X RIiPadpt RIiPadlc" src="img/edit_button.png" alt="missing">
+      </div>
+    </div>
+  <div ng-show="isEditing" class="btn-rnd-cont" >
+    <div class="btn-rnd btn-rnd-right-active" style="top:-150px !important; left:280px;" ng-click="noSave()">
+      <i class="glyphicon glyphicon-remove-circle btn-glyph grciP6 grcGS5 grciP6S grcNX6P grciP5 grcNX5X grciPadpt grciPadlc"></i>
+    </div>
+  </div>
+    <div ng-if="isEditing" class="btn-rnd-cont">
+      <div class="btn-rnd btn-rnd-right-active" ng-click="save()">
+        <img class="round-img RIiP6 RIGS5 RIiP6S RINX6P RIiP5 RINX5X RIiPadpt RIiPadlc" src="img/save_button.png" alt="missing">
+      </div>
+    </div>
+</div>
+  <div ng-controller="Profile">
+  <br>
+  <div class="">
+    <h3 class="customWhite center username">{{user.salutation + ' '+ user.name.first+ ' '+ user.name.last}}</h3>
+</div>
+  </div><br>
+    <div class="section-subheading center ">SPECIALTY
+    </div>
+    <div class="opacity " ng-repeat="specialty in user.specialties">
+      <a class="center docdetails" ui-sref="app.query({ query: specialty.name })" ng-hide="isEditing">{{specialty.name}}</a>
+    </div>
+    <div class="form-group nopadding leftAlign" ng-if="isEditing">
+      <div class=" nopadding">
+        <!-- TODO using user.specialties[0] until UI for multiple specialties is designed -->
+        <br><select class="form-control {{specColor}} leftAlign boxColour" id="specialtyDropdown"
+                ng-model="user.specialties[0]"
+                ng-init="spec.name = user.specialties[0].name"
+                ng-options="spec.name for spec in specialties"
+                ng-change="updateColor(user.specialties[0])">
+          <option value="">{{user.specialties[0].name}}</option>
+        </select>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="section-subheading spacer-top-sm center">AFFILIATED ORGANIZATION</div>
+    <div class="opacity" ng-repeat="workplace in user.workplaces">
+      <a class="center docdetails" ui-sref="app.query({ query: workplace.name })" ng-hide="isEditing">{{workplace.name}}</a>
+      <input type="text" class="customBlack form-control leftAlign boxColour profileStyle" id="workplace" name="workplace"
+             ng-model="workplace.name"
+             uib-typeahead="organization._id as organization.name for organization in organizations | filter:$viewValue | limitTo:8"
+             typeahead-input-formatter="updateModel($model, organizations, 'workplaces')"
+             typeahead-loading="true"
+             ng-if="isEditing">
+    </div>
+
+    <br>
+
+  <div class="section-subheading spacer-top-sm center">FELLOWSHIPS</div>
+  <div class="opacity" ng-repeat="fellowship in user.fellowships track by $index">
+    <a class="center docdetails"  ui-sref="app.query({ query: fellowship.name })" ng-hide="isEditing">{{fellowship.name}}</a>
+    <input type="text" class="customBlack form-control leftAlign boxColour  " id="fellowships" name="fellowships"
+           ng-model="fellowship.name"
+           uib-typeahead="organization._id as organization.name for organization in organizations | filter:$viewValue | limitTo:8"
+           typeahead-input-formatter="updateModel($model, organizations, 'fellowships')"
+           typeahead-loading="true"
+           ng-if="isEditing">
+  </div>
+
+  <br>
+  <br class="ipadbreak" style="display:none;">
+
+  <div class="section-subheading spacer-top-sm center">MEDICAL SCHOOL</div>
+  <div class="opacity" ng-repeat="school in user.schools track by $index">
+    <a class="center docdetails" ui-sref="app.query({ query: school.name })" ng-hide="isEditing">{{school.name}}</a>
+    <input type="text" class=" customBlack form-control leftAlign boxColour" id="medicalSchool" name="medicalSchool"
+           ng-model="school.name"
+           uib-typeahead="organization._id as organization.name for organization in organizations | filter:$viewValue | limitTo:8"
+           typeahead-input-formatter="updateModel($model, organizations, 'schools')"
+           typeahead-loading="true"
+           ng-if="isEditing">
+  </div>
+
+  <br>
+  <br class="ipadbreak" style="display:none;">
+
+    <div class="section-subheading spacer-top-sm center">RESIDENCY</div>
+    <div class="opacity" ng-repeat="residency in user.residencies">
+      <a class="center docdetails" ui-sref="app.query({ query: residency.name })" ng-hide="isEditing">{{residency.name}}</a>
+      <input type="text" class="customBlack form-control leftAlign boxColour" id="residency" name="residency"
+             ng-model="residency.name"
+             uib-typeahead="organization._id as organization.name for organization in organizations | filter:$viewValue | limitTo:8"
+             typeahead-input-formatter="updateModel($model, organizations, 'residencies')"
+             typeahead-loading="true"
+             ng-if="isEditing">
+    </div>
+  <br>
+  <br class="ipadbreak" style="display:none;">
+
+</div>
+  </div>
+<div class="rm-bootstrap-form-animation leftAlign " ng-class="{ 'btn-rnd-cont': isEditable }">
+  <div class="section-subheading center">ABOUT</div>
+
+  <p ng-hide="isEditing" class=" customWhite center opacity" >{{user.aboutme}}</p>
+    <textarea class="form-control docdetails" id="userBio" name="userBio" rows="6"
+              ng-if="isEditing" ng-model="user.aboutme" ng-maxlength="1000">{{user.aboutme}}
+    </textarea>
+
+
+  <br>
+
+</div>

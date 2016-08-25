@@ -1,0 +1,40 @@
+$positive: #105DDF;
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "../www/lib/ionic/scss";
+.size {
+	width: 50%;
+}
+
+.center {
+	display: block;
+	text-align: center;
+}
+
+.signup {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+body.platform-ios {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.ionic-body.platform-ios {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body.platform-android {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.ionic-body.platform-android {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.tab-item,input,button,select,textarea {
+	font-family: inherit;
+}
+

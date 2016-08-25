@@ -1,0 +1,15 @@
+<ion-nav-bar class=" nav-title-slide-ios7 ipadbar">
+  <ion-nav-buttons side="right">
+    <button class=" button-icon icon ion-navicon " ng-click="showMenu()"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="left">
+    <form ng-submit="callSearch(query);">
+      <div class=" input-container">
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon" ></i>
+          <input id="srch" class="customInput searchText" type="text" ng-model="query" placeholder=" Search">
+        </label>
+      </div>
+    </form>
+  </ion-nav-buttons>
+</ion-nav-bar>

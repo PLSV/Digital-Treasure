@@ -1,0 +1,44 @@
+<ion-view  hide-nav-bar="true" style="background:url('img/bg@2x.png')">
+    <ion-content padding="true" overflow-scroll="true" ng-controller="AppCtrl" style="height=100%;">
+      <br>
+        <a ui-sref="page" class="backbutton" style="text-align:left;"><img src="img/back.png" height=12px> BACK</a><br>
+        <div class="spacer" style="width: 283px; height: 25px;"></div>
+          <div class="">
+          <img class="page9logo" src="img/giblib_logo@2x.png" width="100" height="" style="display: block; margin-left: auto; margin-right: auto;">
+        </div><br><br>
+        <form id="page2-form4" name="myForm" class="list" novalidate ng-submit="LoginUser()" style="">
+            <div class="spacer" style="width: 283px; height: 30px;"></div>
+            <br>
+          <div class="lineBg">
+            <label class="item item-input " id="page4-tetarea1">
+            <input class="center space authenticate" type="text" placeholder="EMAIL" ng-model="email" required/><br>
+            </label>
+            <br>
+          </div>
+          <div class="spacer" style="width: 283px; height: 30px;"></div>
+
+          <div class="lineBg">
+            <label class="item item-input " id="page4-textarea1">
+                <input class="center space authenticate" placeholder=" PASSWORD" style="" type="password" ng-model="password" required/>
+            </label>
+          </div>
+          <br>
+          <br>
+          <div class="entry"></div>
+          <div class="corridor">
+            <button class="button slick" ng-disabled="myForm.$invalid">
+              <p class="allbuttons customWhite">SIGN IN</p>
+            </button>
+          </div>
+          <div class="exit"></div>
+          <div class="spacer" style="width: 283px; height: 70px;"></div>
+
+          <br>
+          <p class=" customWhite center">By signing in, I agree to the <a class="underline" ui-sref="serviceTerms">Terms of Service</a> and <a class="underline" ui-sref="privacyTerms">Privacy Policy</a>.</p>
+          <br>
+          <div>
+            <h5><a class="center underline" ui-sref="forgot">Forgot Password?</a></h5>
+          </div>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,45 @@
+<ion-view hide-nav-bar="true" id="page11" class=" " style="background:url('img/bg@2x.png')">
+  <ion-content padding="true"  overflow-scroll="true" ng-controller="Registration" style="height=100%;"> <br>
+    <a ui-sref="page3" class="backbutton" style="text-align:left;" ><img src="img/back.png" height=12px> BACK</a>
+
+    <div>
+      <p class="center"><br>
+        <b class="customWhite">Sign Up</b>
+      </p>
+    </div>
+    <div>
+      <progress value="25" max="100">
+        <span id="downloadProgress">25</span>%
+      </progress>
+    </div>
+    <div class="spacer studsignupiphone5 studsignupgalaxy studsignupnexusX studSignupiphone6 studSignupiphone6Plus" style="width: 300px; height: 26px;"></div>
+    <div>
+      <p>
+        <b class="customWhite">Create Your Account!!</b><br>
+      </p>
+    </div>
+    <div class="spacer studsignupiphone5 studsignupgalaxy studsignupnexusX studSignupiphone6 studSignupiphone6Plus" style="width: 300px; height: 20px;"></div>
+    <form id="page4-form6" name="myForm" class="list ">
+      <div class="regBg ">
+        <label class="item item-input" id="page4-textarea1">
+          <input class="center space" type="text" placeholder="ENTER EMAIL"  ng-model="registerform.email" required/>
+       </label>
+      </div>
+      <div class="spacer studsignupiphone5 studsignupgalaxy studsignupnexusX studSignupiphone6 studSignupiphone6Plus" style="width: 300px; height: 30px;"></div>
+      <div class="regBg ">
+      <label class="item item-input" id="page4-textarea2">
+        <input class="center space" type="password"  placeholder="ENTER PASSWORD" ng-model="registerform.password" required/>
+      </label>
+        </div>
+      <div class="spacer studsignupiphone5 studsignupgalaxy studsignupnexusX studSignupiphone6 studSignupiphone6Plus" style="width: 282.986px; height: 143.997px;"></div>
+      <div style="margin-right:-20px;">
+      <div class="entry"></div>
+      <div class="corridor">
+        <button id="page4-button8" style="left:0px;"  class="button slick ipadfonts" ui-sref="page14" ng-click="setFormData();" ng-disabled="registerform.email === undefined || registerform.email.indexOf('@') === -1 || registerform.email.indexOf('.') === -1 || registerform.email.length < 4 || registerform.password.length < 6 || registerform.password === undefined">Next</button>
+      </div>
+      <div class="exit"></div>
+      </div>
+    </form>
+
+  </ion-content>
+</ion-view>

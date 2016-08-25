@@ -1,0 +1,43 @@
+
+<ion-view hide-nav-bar="true" id="page15" class=" " style="background:url('img/bg@2x.png')">
+    <ion-content padding="true" overflow-scroll="true" ng-controller="Registration">
+
+      <div ng-controller="Registration">
+        <div ng-show="doc"> <br>
+        <button ui-sref="page6" class="backbutton" style="text-align:left;" ><img src="img/back.png" height=12px>BACK</button>
+        </div>
+        <div ng-show="stud">
+          <button ui-sref="page15" id="page2-button" style="text-align:left;" class=" button button-positive button-small icon ion-chevron-left "></button>
+        </div>
+      </div>
+      <div><br>
+        <progress value="90" max="100">
+          <span id="downloadProgress">25</span>
+        </progress>
+      </div><br>
+      <div class="spacer" style="width: 281.094px; height: 30.9896px;"></div>
+      <h4 id="page7-heading4"class="center customWhite VyIgalaxy VyInexusX VyIiPhone5 VyIiPhone6 VyIiPhone6Plus">Verify your Identifty</h4><br>
+      <p id="page7-markdown2" class="center customWhite">To verify your status , we ask you submit a picture of your final medical diploma, final medical transcript and/or any other documents that may help us verify you.</p>
+      <div class="spacer" style="width: 281.111px; height: 20px;"></div>
+      <div ng-controller= "cameraClickCtrl">
+          <!--<img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+          <img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300">-->
+        <button id="page7-button12" class=" button button-positive  button-block icon ion-camera cameraLine" ng-click="takePicture()"> Take Photo</button>
+      </div>
+      <div ng-controller= "cameraUploadCtrl">
+        <!--<img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+          <img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300">-->
+        <button id="page7-button13" class=" button button-positive  button-block icon ion-android-image cameraLine" ng-click="takePicture()"> Choose Photo</button>
+        <img ng-src="{{ fileName }}" />
+      </div>
+        <div class="spacer VyIiPhone5spacer" style="width: 281.094px; height: 19.9896px;"></div>
+        <div style="margin-right:-20px;">
+        <div class="entry"></div>
+        <div class="corridor">
+            <button id="page7-button14" style="left:0px;" class="button slick ipadfonts" ng-click="register();">Next</button>
+        </div>
+        <div class="exit"></div>
+        </div>
+    </ion-content>
+</ion-view>
+

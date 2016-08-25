@@ -1,0 +1,50 @@
+<ion-view  hide-nav-bar="true" id="page12" class=" " style="background:url('img/bg@2x.png')">
+  <ion-content padding="true" overflow-scroll="true"  ng-controller="Registration"> <br>
+    <a ui-sref="page13" class="backbutton" style="text-align:left;" ><img src="img/back.png" height=12px> BACK</a>
+    <div>
+      <p class="center BIgalaxy BInexusX BIstudiphone5 BIIphone6 BIiPhone6S"><br>
+        <b class="customWhite">Sign Up</b>
+      </p>
+    </div>
+    <div>
+      <progress value="50" max="100">
+        <span id="downloadProgress">25</span>%
+      </progress>
+    </div>
+    <div class="spacer" style="width: 300px; height: 7px;"></div>
+    <div>
+      <p class="BIgalaxy BInexusX BIstudiphone5 BIIphone6 BIiPhone6S">
+        <b class="customWhite">Basic Information</b><br><br><br>
+      </p>
+    </div>
+    <form id="page5-form8"  name="myForm" class="list " >
+      <div class="regBg ">
+      <label class="item item-input " id="page5-input6">
+        <input type="text" class="center space"  placeholder="FIRST NAME" ng-model="registerform.firstname"  required/>
+      </label>
+        </div>
+      <div class="spacer" style="width: 300px; height: 30px;"></div>
+      <div class="regBg ">
+      <label class="item item-input " id="page5-input7">
+        <input type="text"  class="center space" placeholder="LAST NAME" ng-model="registerform.lastname"  required/>
+      </label>
+        </div>
+      <div class="spacer" style="width: 300px; height: 30px;"></div>
+      <div class="regBg ">
+      <label class="item item-input" id="page5-select3">
+        <input type="text" class="center space" placeholder="BIRTHDAY (MM/DD/YYYY)" ng-model="registerform.birthday"   ng-pattern="/(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/" required/>
+      </label>
+        </div> <br>
+      <div class="spacer" style="width: 300px; height: 30.9861px;"></div>
+      <div style="margin-right:-20px;">
+        <div class="entry"></div>
+        <div class="corridor">
+        <button id="page5-button9" style="left:0px;"  class="button slick ipadfonts" ui-sref="page15" ng-disabled="myForm.$invalid" ng-click="setFormData();">Next</button>
+      </div>
+        <div class="exit"></div>
+
+      </div>
+    </form>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,19 @@
+<ion-side-menus>
+    <ion-side-menu-content drag-content="false" >
+
+      <giblib-header></giblib-header>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+      <giblib-footer></giblib-footer>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="right">
+      <ion-header-bar class="headerBg">
+        <h3 class="title centAlign">Specialities</h3>
+      </ion-header-bar>
+      <ion-content class="has-header">
+        <ion-list>
+          <ion-item class="listItem" ng-repeat="specialty in specialties" ng-value="specialty._id" ng-click="goto(specialty.name);">{{specialty.name}}</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu>
+  </ion-side-menus>

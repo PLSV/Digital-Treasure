@@ -1,0 +1,41 @@
+{
+  "name": "videojs-panorama",
+  "description": "a plugin for videojs run a full 360 degree panorama video.",
+  "main": "es5/plugin.js",
+  "authors": [
+    "yanwsh@gmail.com"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "videojs",
+    "videojs-plugin"
+  ],
+  "homepage": "https://github.com/yanwsh/videojs-panorama",
+  "moduleType": [
+    "es6"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "three.js": "^0.76.0"
+  },
+  "devDependencies": {
+    "videojs_5": "video.js#5",
+    "videojs_4": "video.js#4"
+  },
+  "_release": "87cae70797",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "87cae7079793ea60e81f646ea05a666cbbd23a9b"
+  },
+  "_source": "https://github.com/Giblib/videojs-panorama.git",
+  "_target": "master",
+  "_originalSource": "https://github.com/Giblib/videojs-panorama.git"
+}

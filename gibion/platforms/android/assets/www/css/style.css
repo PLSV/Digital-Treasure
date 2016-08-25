@@ -1,0 +1,503 @@
+.video-js{
+margin-left:auto;
+margin-right:auto;
+display:block;
+}
+
+.timestamp{
+margin-top:1px;
+font-size:50%;
+}
+
+.commentbtn{
+margin-left:auto!important;
+margin-right:auto!important;
+display:block!important;
+}
+
+.replybtn{
+float:right;
+margin-top:-10%!important;
+}
+
+.commentonit{
+margin-left:auto!important;
+margin-right:auto!important;
+display:block!important;
+}
+
+.response{
+float:right;
+}
+
+@media only screen and (width:435px)
+{
+  .slideHeight{
+    margin-left:30px;
+    text-align:center;
+  }
+}
+@media only screen and (width:425px){
+.slideHeight{
+margin-left:20px;
+text-align:center;
+}
+}
+
+@media only screen and (min-width:410px) and (max-width:415px){
+.slideHeight{
+text-align:center;
+}
+
+.likeAlign{
+        margin-left:240px;
+    }
+}
+
+@media only screen and (min-width:350px) and (max-width:361px){
+.slideHeight{
+margin-right:-41px !important;
+text-align:center !important;
+}
+.card{
+/*width:90%;*/}
+}
+
+@media only screen and (min-width:365px) and (max-width:376px){
+.slideHeight{
+text-align:center;
+margin-right:-25px !important;
+}
+
+.likeAlign{
+        margin-left:200px;
+    }
+}
+
+@media only screen and (min-width:311px) and (max-width:320px){
+.slideHeight{
+margin-right:90px !important;
+text-align:center;
+}
+.likeAlign{
+        margin-left:140px;
+    }
+/*.card{ width:75% ; */}
+}
+.subCard {
+width: 100% !important;
+}
+.drCard {
+padding : 0px !important;
+margin : 0px !important;
+background : url('https://d3qvvqcer8e0wf.cloudfront.net/btn_menu%402x.png');
+}
+
+@media only screen and (width:320px) {
+    .slider-slide { width : 420px !important; }
+    .slider-slides { width : 2600px !important; }
+      #sw0 { left : 0px !important; }
+      #sw1 { left : -510px !important; }
+      #sw2 { left : -1020px !important; }
+      #sw3 { left : -1530px !important; }
+      #sw4 { left : -2040px !important; }
+
+      .entry {
+          float: left;
+          border-right: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 23px solid transparent;
+          margin-left: 15%;
+          margin-right: -1px;
+      }
+      .corridor {
+          float: left;
+          width: 55%;
+          height: 8.75%;
+          background-color: #667580 ;
+      }
+      .exit {
+          float: left;
+          border-left: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 23px solid transparent;
+          margin-left: -1px;
+      }
+
+      .allbuttons {
+          margin: 5px 0px !important;
+          font-size: medium;
+      }
+}
+
+@media only screen and (width:360px) {
+    .slider-slide { width : 400px !important; }
+    .slider-slides { width : 2600px !important; }
+    .likeAlign{
+        margin-left:180px;
+    }
+
+      .entry {
+          float: left;
+          border-right: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 23px solid transparent;
+          margin-left: 15%;
+          margin-right: -1px;
+      }
+      .corridor {
+          float: left;
+          width: 55%;
+          /*height: 7.75%;*/
+          background-color: #667580 ;
+      }
+      .exit {
+          float: left;
+          border-left: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 23px solid transparent;
+          margin-left: -1px;
+      }
+
+      .allbuttons {
+          margin: 5px 0px !important;
+          font-size: medium;
+      }
+
+}
+
+@media only screen and (width:375px) {
+    .slider-slide { width : 378px !important; }
+    .slider-slides { width : 2600px !important; }
+      #sw0 { left : 0px !important; }
+      #sw1 { left : -358px !important; }
+      #sw2 { left : -713px !important; }
+      #sw3 { left : -1063px !important; }
+      #sw4 { left : -1415px !important; }
+
+      .entry {
+          float: left;
+          border-right: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 22px solid transparent;
+          margin-left: 15%;
+          margin-right: -1px;
+      }
+      .corridor {
+          float: left;
+          width: 55%;
+          height: 7.5%;
+          background-color: #667580 ;
+      }
+      .exit {
+          float: left;
+          border-left: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 22px solid transparent;
+          margin-left: -1px;
+      }
+
+      .allbuttons {
+          margin: 5px 0px !important;
+          font-size: medium;
+      }
+}
+
+@media only screen and (width:411px) {
+    .slider-slide { width : 408.5px !important; }
+    .slider-slides { width : 2600px !important; }
+      #sw0 { left : -1px !important; }
+      #sw1 { left : -409px !important; }
+      #sw2 { left : -816px !important; }
+      #sw3 { left : -1229px !important; }
+      #sw4 { left : -1636px !important; }
+
+      .likeAlign{
+              margin-left:180px;
+          }
+
+      .entry {
+          float: left;
+          border-right: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 23px solid transparent;
+          margin-left: 15%;
+          margin-right: -1px;
+      }
+      .corridor {
+          float: left;
+          width: 55%;
+          height: 7.5%;
+          background-color: #667580 ;
+      }
+      .exit {
+          float: left;
+          border-left: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 23px solid transparent;
+          margin-left: -1px;
+      }
+
+      .allbuttons {
+          margin: 5px 0px !important;
+          font-size: medium;
+      }
+
+}
+
+@media only screen and (width:414px) {
+    .slider-slide { width : 415px !important; }
+    .slider-slides { width : 2600px !important; }
+      .slideHeight{ margin-left:0px; }
+      #sw0 { left : -1px !important; }
+      #sw1 { left : -419px !important; }
+      #sw2 { left : -834px !important; }
+      #sw3 { left : -1249px !important; }
+      #sw4 { left : -1663px !important; }
+
+      .entry {
+          float: left;
+          border-right: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 21px solid transparent;
+          margin-left: 15%;
+          margin-right: -1px;
+      }
+      .corridor {
+          float: left;
+          width: 55%;
+          height: 6.5%;
+          background-color: #667580 ;
+      }
+      .exit {
+          float: left;
+          border-left: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 21px solid transparent;
+          margin-left: -1px;
+      }
+
+      .allbuttons {
+          margin: 5px 0px !important;
+          font-size: medium;
+      }
+
+}
+
+@media only screen and (width:435px) {
+    .slider-slide { width : 427.5px !important; }
+    .slider-slides { width : 2600px !important; }
+      #sw0 { left : -29px !important; }
+      #sw1 { left : -486px !important; }
+      #sw2 { left : -942px !important; }
+      #sw3 { left : -1401px !important; }
+      #sw4 { left : -1857px !important; }
+
+      .entry {
+          float: left;
+          border-right: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 23px solid transparent;
+          margin-left: 15%;
+          margin-right: -1px;
+      }
+      .corridor {
+          float: left;
+          width: 55%;
+          height: 6.5%;
+          background-color: #667580 ;
+      }
+      .exit {
+          float: left;
+          border-left: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 23px solid transparent;
+          margin-left: -1px;
+      }
+
+      .allbuttons {
+          margin: 5px 0px !important;
+          font-size: medium;
+      }
+}
+
+/** landscape mode **/
+@media only screen and (width:640px) {
+         .entry {
+             float: left;
+             border-right: 30px solid #667580 ;
+             border-top: 23px solid transparent;
+             border-bottom: 23px solid transparent;
+             margin-left: 15%;
+             margin-right: -1px;
+         }
+         .corridor {
+             float: left;
+             width: 55%;
+             height: 14.75%;
+             background-color: #667580 ;
+         }
+         .exit {
+             float: left;
+             border-left: 30px solid #667580 ;
+             border-top: 23px solid transparent;
+             border-bottom: 23px solid transparent;
+             margin-left: -1px;
+         }
+         .itorso {
+             height: 60px !important;
+         }
+}
+
+@media only screen and (width:731px) {
+         .entry {
+             float: left;
+             border-right: 30px solid #667580 ;
+             border-top: 23px solid transparent;
+             border-bottom: 23px solid transparent;
+             margin-left: 15%;
+             margin-right: -1px;
+         }
+         .corridor {
+             float: left;
+             width: 55%;
+             height: 6.5%;
+             background-color: #667580 ;
+         }
+         .exit {
+             float: left;
+             border-left: 30px solid #667580 ;
+             border-top: 23px solid transparent;
+             border-bottom: 23px solid transparent;
+             margin-left: -1px;
+         }
+}
+
+@media only screen and (width:773px) {
+         .entry {
+             float: left;
+             border-right: 30px solid #667580 ;
+             border-top: 23px solid transparent;
+             border-bottom: 23px solid transparent;
+             margin-left: 15%;
+             margin-right: -1px;
+         }
+         .corridor {
+             float: left;
+             width: 55%;
+             height: 11.75%;
+             background-color: #667580 ;
+         }
+         .exit {
+             float: left;
+             border-left: 30px solid #667580 ;
+             border-top: 23px solid transparent;
+             border-bottom: 23px solid transparent;
+             margin-left: -1px;
+         }
+}
+
+@media only screen and (width:667px) {
+         .entry {
+             float: left;
+             border-right: 30px solid #667580 ;
+             border-top: 23px solid transparent;
+             border-bottom: 23px solid transparent;
+             margin-left: 15%;
+             margin-right: -1px;
+         }
+         .corridor {
+             float: left;
+             width: 55%;
+             height: 13.75%;
+             background-color: #667580 ;
+         }
+         .exit {
+             float: left;
+             border-left: 30px solid #667580 ;
+             border-top: 23px solid transparent;
+             border-bottom: 23px solid transparent;
+             margin-left: -1px;
+         }
+}
+
+@media only screen and (width:736px) {
+         .entry {
+             float: left;
+             border-right: 30px solid #667580 ;
+             border-top: 23px solid transparent;
+             border-bottom: 23px solid transparent;
+             margin-left: 15%;
+             margin-right: -1px;
+         }
+         .corridor {
+             float: left;
+             width: 55%;
+             height: 12.5%;
+             background-color: #667580 ;
+         }
+         .exit {
+             float: left;
+             border-left: 30px solid #667580 ;
+             border-top: 23px solid transparent;
+             border-bottom: 23px solid transparent;
+             margin-left: -1px;
+         }
+}
+
+@media only screen and (width: 568px) {
+        .entry {
+            float: left;
+            border-right: 30px solid #667580 ;
+            border-top: 23px solid transparent;
+            border-bottom: 23px solid transparent;
+            margin-left: 15%;
+            margin-right: -1px;
+        }
+        .corridor {
+            float: left;
+            width: 55%;
+            height: 16.85%;
+            background-color: #667580 ;
+        }
+        .exit {
+            float: left;
+            border-left: 30px solid #667580 ;
+            border-top: 23px solid transparent;
+            border-bottom: 23px solid transparent;
+            margin-left: -1px;
+        }
+        .itorso, .torso {
+            height: 30px !important;
+        }
+}
+
+@media only screen and (width: 412px) {
+      .entry {
+          float: left;
+          border-right: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 23px solid transparent;
+          margin-left: 15%;
+          margin-right: -1px;
+      }
+      .corridor {
+          float: left;
+          width: 55%;
+          background-color: #667580 ;
+      }
+      .exit {
+          float: left;
+          border-left: 30px solid #667580 ;
+          border-top: 23px solid transparent;
+          border-bottom: 23px solid transparent;
+          margin-left: -1px;
+      }
+}
+
+.btnFix {
+position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}

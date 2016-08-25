@@ -1,0 +1,69 @@
+
+<div class="spacer" style="width: 281.111px; height: 15px;"></div>
+
+  <div class="item item-avatar text-left itemTop">
+    <img class="imgTop ipadimg" ui-sref="doctor({ doctor:video.uploader._id })" src="{{avatar}}" >
+    <div class="pull-right" ng-init="checkFav(video._id);">
+        <i id="like" class="ion-ios-heart-outline ipadheart" ng-show="outline[video._id]" ng-click="fav(video._id);"></i>
+        <i class="ion-ios-heart ipadheart" ng-show="love[video._id]" ng-click="unFav(video._id);"></i>
+    </div>
+    <a ui-sref="doctor({ doctor:video.uploader._id })"><b class="customBlack item-left item-left-ipad">{{doctor}}</b></a>
+
+  <div class="spacer" style="width: 281.111px; height: 15px;"></div>
+        <div class="container ipadcont">
+            <div id="videocontainer">
+                <div play-card class="ng-isolate-scope">
+                    <div class="play-card" style="background: url('{{video.smthumbnail ? video.smthumbnail : video.thumbnail  }}') no-repeat center center / cover, url('/img/ionic.png') no-repeat center center / cover " ng-click="startplaying(video);">
+                        <div class="specialty {{video.specialty.name}}">
+                            <a class="ng-binding" href="" tabindex="0">{{video.specialty.name}}</a>
+                        </div>
+                        <a class="slideUp" check-sign-in href="" tabindex="0">
+                            <div class="title font-dinn">
+                                <span class="surgery-title-spans customWhite nextSp " >{{video.title}}</span>
+                            </div>
+                            <div class="idle-overlay"></div>
+                            <div class="play-overlay" style="background: url('img/play_logo.png') no-repeat center;"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <div class="row iconsLeft">
+    <a class="" ng-init="getLikes(video._id);">
+                <i id="{{ video._id }}" class="glyphicon glyphicon-thumbs-up " ng-if="!youhaveliked" ng-click="setLike(video._id)"></i>
+                <i class="glyphicon glyphicon-thumbs-up {{ video.specialty.name + 'Col' }}" ng-if="youhaveliked" ng-disabled="true"></i>
+            </a> &nbsp; &nbsp; &nbsp;
+
+            <a class="">
+                <i class="ion-ios-chatbubble-outline {{ video.specialty.name + 'Col' }}" ng-class="{red: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-click="setId(video._id);"></i>
+            </a> &nbsp; &nbsp; &nbsp;
+
+            <a class="" ng-click="sendVideoEmail();">
+                <i class="ion-android-share-alt"></i>
+            </a>&nbsp; &nbsp;
+
+    <p  id="{{ video._id + 'Para' }}" ><b class="likeAlign">{{ video.likes.length }} Likes</b>&nbsp; </p>
+
+  </div>
+
+        <div class="item item-avatar row item">
+        </div>
+
+        <div class="leftAlign nextSp"  >
+          {{video.description | limitTo: limit}}{{video.description.length > limit ? '...' : ''}}
+          <a class="descBtn" ng-show="video.description.length > limit" href ng-click="limit=video.description.length; moreShown = true">  More
+          </a>
+          <a class="descBtn" ng-show="moreShown" href ng-click="limit=100; moreShown = false"> Less </a>
+        </div>
+  <div class="spacer" style="width: 281.111px; height: 6px;"></div>
+
+  <div ng-repeat="comment in commentset | limitTo:2">
+            <div class="item mainPad">
+                &nbsp;<b style="font-weight:600">{{comment.author.name.first +' '+comment.author.name.last}}:</b>&nbsp;<span class="nextSp">{{ comment.text }}</span>
+            </div>
+  </div>
+
+  <div class="row" ng-show="commLen();">
+            <p class="showallcomms" ng-click="setId(video._id);" >&nbsp;&nbsp;&nbsp;&nbsp;Show all {{comments[video._id]}} comments</p>
+        </div>
+    </div>

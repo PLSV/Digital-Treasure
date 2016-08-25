@@ -1,0 +1,14 @@
+<ion-nav-view>
+  <ion-content class="has-header has-footer" >
+    <div class="spacer" style="width: 281.111px; height: 10px;"></div>
+
+    <div class="slideHeight"><h3 class="customBlack center medspecs">{{ specialtyAs }}</h3></div>
+    <div class="list card itemTop subCard" ng-repeat="i in specVideos | limitTo :limit">
+      <video-detail video="i"></video-detail>
+    </div>
+    <div class="readmore">
+      <button class="black center" ng-show="specVideos.length > limit" ng-click="limit = limit + 12">+ MORE</button>
+    </div>
+    <br>
+  </ion-content>
+</ion-nav-view>
